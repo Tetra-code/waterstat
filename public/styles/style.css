@@ -67,7 +67,7 @@ svg {
   opacity: 1;
 }
 
-.sidenav {
+/* .sidenav {
   height: 100%;
   width: 15%;
   position: fixed;
@@ -90,7 +90,7 @@ svg {
 
 .sidenav a:hover {
   color: #f1f1f1;
-}
+} */
 
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
@@ -120,7 +120,7 @@ svg {
 
 .sidebar .bar {
   padding: 0 10% 20% 10%;
-  color: black;
+  color: #000328;
 }
 
 .sidebar a:hover {
