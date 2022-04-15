@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Tetra-code/waterstat#readme",
   "dependencies": {
-    "node": "^17.7.2"
+    "node": "^17.7.2",
+    "ws": "^8.5.0"
   }
 }
