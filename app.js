@@ -13,7 +13,12 @@ const cities = ['alkmaar', 'almere', 'amersfoort', 'amstelveen', 'amsterdam-nl',
     'tilburg', 'utrecht', 'veere', 'venlo', 'wageningen', 'zaanse-schans', 'zwolle'];
 let waterData = {};
 async function scrapeProduct() {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+          ],
+    });
     const page = await browser.newPage();
     for (let i = 0; i<cities.length; i++) {
         const url = `https://www.tapsafe.org/is-${cities[i]}-tap-water-safe-to-drink/`;
