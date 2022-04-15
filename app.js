@@ -18,11 +18,16 @@ async function scrapeProduct() {
         args: ['--no-sandbox','--disable-setuid-sandbox']
     });
     const page = await browser.newPage();
+    let items;
     for (let i = 0; i<cities.length; i++) {
         const url = `https://www.tapsafe.org/is-${cities[i]}-tap-water-safe-to-drink/`;
-        await page.goto(url);
-        await page.waitForSelector('.water-quality-graph__bar');
-        const items = await page.$$eval('.water-quality-graph__bar', itemElements => itemElements.map(i => i.innerText.trim()));
+        try {
+            await page.goto(url);
+            await page.waitForSelector('.water-quality-graph__bar');
+            items = await page.$$eval('.water-quality-graph__bar', itemElements => itemElements.map(i => i.innerText.trim()));
+        } catch (e) {
+            items = 'unknown';
+        }
         waterData[cities[i]] = items;
     }
     browser.close();
