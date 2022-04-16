@@ -16,7 +16,6 @@ socket.onmessage = (message) =>{
 
 function openNav(city) {
     socket.send(JSON.stringify(city));
-    sidebar.style.height = "90%";
     sidebar.style.width = "20%";
 }
 
