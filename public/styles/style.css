@@ -25,6 +25,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -361,8 +362,8 @@ svg {
   right: 41.5%;
 }
 
-/* On smaller screens, where height is less than 700px */
-@media (orientation: portrait) and (max-width: 600px) {
+/* On smaller screens, where width is less than 650px */
+@media (orientation: portrait) and (max-width: 650px) {
   
   .container {
     width: 200%;
@@ -370,10 +371,10 @@ svg {
   }
 
   .sidebar {
-    top: 50%;
+    top: 55%;
   }
 
-  body{
+  *{
     overflow-x: hidden;
   }
 }
