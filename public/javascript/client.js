@@ -1,4 +1,5 @@
-const socket = new WebSocket(`ws://${location.host}`)
+const wsProtocol = location.protocol.includes('https') ? 'wss:' : 'ws:';
+const socket = new WebSocket(`${wsProtocol}//${location.host}`);
 const sidebar = document.getElementById("mySidebar");
 const main = document.getElementById("main");
 const drinkingWaterPollution = document.getElementById("drinking-water-pollution");
