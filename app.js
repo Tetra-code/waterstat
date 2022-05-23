@@ -11,7 +11,9 @@ const cities = ['alkmaar', 'almere', 'amersfoort', 'amstelveen', 'amsterdam-nl',
     'gouda', 'haarlem', 'heerlen', 'hilversum', 'hoorn', 'kampen', 'kinderdijk', 'leeuwarden',
     'leiden', 'lelystad', 'maastricht', 'medemblik', 'nijmegen', 'roermond', 'rotterdam', 'sneek',
     'tilburg', 'utrecht', 'veere', 'venlo', 'wageningen', 'zaanse-schans', 'zwolle'];
+
 let waterData = {};
+
 async function scrapeProduct() {
     const browser = await puppeteer.launch({
         headless: true,
@@ -32,6 +34,7 @@ async function scrapeProduct() {
     }
     browser.close();
 };
+
 scrapeProduct();
 
 app.set("views", `${__dirname}/views`);

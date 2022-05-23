@@ -13,34 +13,32 @@
         <svg viewBox="0 20 500 500" preserveAspectRatio="xMinYMin meet">
             <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:lightskyblue;"></path>
             <text x="77" y="50" fill="white">Netherlands</text>
-            <text x="77" y="80" fill="white">Water</text>
-            <text x="77" y="110" fill="white">Stats</text>
+            <text x="77" y="85" fill="white">Water</text>
+            <text x="77" y="120" fill="white">Stats</text>
         </svg>  
     </div>
-    <!-- <div class="sidenav">
-    </div> -->
     <div class="container">
-        <img src="images/netherlands.png" width="45%">
+        <img src="images/netherlands.png">
         <div class="dot Alkmaar" onclick="openNav('alkmaar')">
-        <div class="city">Alkmaar</div>
+            <div class="city">Alkmaar</div>
         </div>
         <div class="dot Almere" onclick="openNav('almere')">
-        <div class="city">Almere</div>
+            <div class="city">Almere</div>
         </div>
         <div class="dot Amersfoort" onclick="openNav('amersfoort')">
-        <div class="city">Amersfoort</div>
+            <div class="city">Amersfoort</div>
         </div>
         <div class="dot Amstelveen" onclick="openNav('amstelveen')">
-        <div class="city">Amstelveen</div>
+            <div class="city">Amstelveen</div>
         </div>
         <div class="dot Amsterdam" onclick="openNav('amsterdam-nl')">
-        <div class="city">Amsterdam</div>
+            <div class="city">Amsterdam</div>
         </div>
         <div class="dot Apeldoorn" onclick="openNav('apeldoorn')">
-        <div class="city">Apeldoorn</div>
+            <div class="city">Apeldoorn</div>
         </div>
         <div class="dot Arnhem" onclick="openNav('arnhem')">
-        <div class="city">Arnhem</div>
+            <div class="city">Arnhem</div>
         </div>
         <div class="dot Assen" onclick="openNav('assen')">
         <div class="city">Assen</div>
@@ -157,17 +155,32 @@
         <div class="city">Zwolle</div>
         </div>
     </div>
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
-        <div class="text">Drinking Water Pollution and Inaccessibility</div>
-        <div class="bar" id="drinking-water-pollution"></div>
+    <div id="mySidebar" class="navigation">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">x</a>
+        <div class="text">Drinking Water Pollution</div>
+        <div class="bar" id="sidebar-drinking-water-pollution"></div>
         <div class="text">Water Pollution</div>
-        <div class="bar" id="water-pollution"></div>
-        <div class="text">Drinking Water Quality and Accessibility</div>
-        <div class="bar" id="drinking-water-quality"></div>
+        <div class="bar" id="sidebar-water-pollution"></div>
+        <div class="text">Drinking Water Quality</div>
+        <div class="bar" id="sidebar-drinking-water-quality"></div>
         <div class="text">Water Quality</div>
-        <div class="bar" id="water-quality"></div>
+        <div class="bar" id="sidebar-water-quality"></div>
     </div>
-    <script src='javascript/client.js'></script>
+    <div id="myNav" class="navigation">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <div class="text">
+            <div>Drinking Water Pollution</div>
+            <div>Water Pollution</div>
+            <div>Drinking Water Quality</div>
+            <div>Water Quality</div>
+        </div>
+        <div class="bar">
+            <div id="nav-drinking-water-pollution"></div>
+            <div id="nav-water-pollution"></div>
+            <div id="nav-drinking-water-quality"></div>
+            <div id="nav-water-quality"></div>
+        </div>
+    </div>
+    <script src='javascript/index.js'></script>
 </body>
 </html>
